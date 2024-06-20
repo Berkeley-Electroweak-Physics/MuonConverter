@@ -10,11 +10,11 @@ Both versions of ```MuonConverter``` (Python and Mathematica) are comprised of f
 See the respecitve example notebooks within the desired language directory for usage examples - including interfacing with external codes.
 
 # Dependencies
-The Python version of the software was developed in Python 3.10 - a detailed list of required software can be found in dependencies.txt.
+The Python version of the software was developed in Python 3.10 - a detailed list of software requirements/dependencies can be found in requirements.txt.
 
-If using conda, the environment can be replicated via the command
+If using conda, the environment can be cloned via the command
 ```shell
-conda create --name <env> --file dependencies.txt
+conda create --name <env> --file requirements.txt
 ```
 where ```<env>``` is the desired environment name.
 
