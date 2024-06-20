@@ -1,6 +1,10 @@
-import sys
+"""
+# parameters.py is a part of the MuonConverter package.
+# Copyright (C) 2024 MuonConverter authors (see AUTHORS for details).
+# MuonConverter is licenced under the BSD 3-Clause, see LICENSE for details.
+"""
+
 import numpy as np
-import warnings
 
 class NumericalInput:
     def __init__(self, my_input_dict=None):
@@ -505,8 +509,8 @@ class NumericalInput:
         self.input_parameters['FFtilden'] = None
 
         # FFtilde evaluated at zero momentum transfer -- FFtilde @ q^2 = 0
-        self.input_parameters['FFtildep_0'] = -3.83e-6
-        self.input_parameters['FFtilden_0'] = 3.9e-7
+        self.input_parameters['FFtildep_0'] = 3.83e-6
+        self.input_parameters['FFtilden_0'] = -3.9e-7
 
         # FFtilde first derivative -- (d [FFtilde] / d q^2) @ q^2 = 0
         self.input_parameters['FFtildep_prime'] = None

@@ -1,3 +1,9 @@
+(* 
+  ::  parameters.wl is a part of the MuonConverter package.                      
+  ::  Copyright (C) 2024 MuonConverter authors (see AUTHORS for details).
+  ::  MuonConverter is licenced under the BSD 3-Clause, see LICENSE for details.
+*)
+
 BeginPackage["MuonConverter`"]
 Begin["`Private`"]
 
@@ -28,21 +34,6 @@ mn = 0.939565; (* GeV *)
 mN = (0.938272 + 0.939565) / 2.; (* GeV *)
 m\[Pi]  = 134.9766*^-3; (* GeV *)
 m\[Eta] = 547.862*^-3; (* GeV *)
-
-(* -------------------------------------------------------------------------- * 
- *  The tensor charges and form factor coefficients @ 2 GeV
- * -------------------------------------------------------------------------- *)
-gT["u"] = + 0.794;
-gT["d"] = - 0.204;
-gT["s"] = + 3.2*^-4;
-
-BT10["u","p"] = BT10["d","n"] = 3.0;
-BT10["d","p"] = BT10["u","n"] = 0.24;
-BT10["s","p"] = BT10["s","n"] = 0.0;
-
-AT10t["u","p"] = AT10t["d","n"] = -0.50;
-AT10t["d","p"] = AT10t["u","n"] = 0.46;
-AT10t["s","p"] = AT10t["s","n"] = 0.0;
 
 (* -------------------------------------------------------------------------- * 
  *  Electroweak inputs
@@ -506,8 +497,8 @@ FFtildep = None;
 FFtilden = None;
 
 (* FFtilde evaluated at zero momentum transfer -- FFtilde @ q^2 = 0 *)
-FFtildep0 = -3.83*^-6;
-FFtilden0 = 3.9*^-7;
+FFtildep0 = 3.83*^-6;
+FFtilden0 = -3.9*^-7;
 
 (* FFtilde first derivative -- (d [FFtilde] / d q^2) @ q^2 = 0 *)
 FFtildepPrime = 0.0;

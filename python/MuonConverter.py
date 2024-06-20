@@ -1,21 +1,22 @@
-import sys
+"""
+# MuonConverter.py is a part of the MuonConverter package.
+# Copyright (C) 2024 MuonConverter authors (see AUTHORS for details).
+# MuonConverter is licenced under the BSD 3-Clause, see LICENSE for details.
+"""
+
 import numpy as np
+import sys
 import pathlib
 from hadronization import Hadronization
 from parameters import NumericalInput
 
-# We have to figure out how to import Mu2eNRET.py
-# from ../../Mu2E_NRET/v2/python
-
-# we are in <top>/MuonConverter/python
-# __file__ is the current file path
-topdir=pathlib.Path(__file__).parent.parent.parent.parent
-mu2edir=topdir / "Mu2e_NRET" / "v2" / "python"
-mu2edir=str(mu2edir.resolve())
-# Add to search path - this is a bit of hack, but works
-sys.path.insert(1, mu2edir) # insert after script path
-
-# now import of Mu2eNRET will work
+# Fix the relative paths for Mu2e_NRET
+MuonBridge_PATH = pathlib.Path(__file__).parent.parent.parent
+Mu2e_NRET_PATH  = MuonBridge_PATH / "Mu2e_NRET" / "v2" / "python"
+Mu2e_NRET_PATH  = str(Mu2e_NRET_PATH.resolve())
+# Add to search path
+sys.path.insert(1, Mu2e_NRET_PATH)
+# Import Mu2e_NRET
 import Mu2eNRET
 
 class Interface:
@@ -263,6 +264,3 @@ if __name__ == "__main__":
 	oscb        = 0
 	isochar     = 'proton'
 	CR = mu2e.compute_rate(element, isotope, interaction, oscb, isochar, input_basis = 'JMS')
-	#print(CR)
-	#had_map = mu2e.JMS_to_RET_map()
-	#print(had_map)

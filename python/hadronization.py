@@ -1,3 +1,9 @@
+"""
+# hadronization.py is a part of the MuonConverter package.
+# Copyright (C) 2024 MuonConverter authors (see AUTHORS for details).
+# MuonConverter is licenced under the BSD 3-Clause, see LICENSE for details.
+"""
+
 import sys
 import numpy as np
 import warnings
