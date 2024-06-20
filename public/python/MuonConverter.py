@@ -9,7 +9,7 @@ from parameters import NumericalInput
 
 # we are in <top>/MuonConverter/python
 # __file__ is the current file path
-topdir=pathlib.Path(__file__).parent.parent.parent
+topdir=pathlib.Path(__file__).parent.parent.parent.parent
 mu2edir=topdir / "Mu2e_NRET" / "v2" / "python"
 mu2edir=str(mu2edir.resolve())
 # Add to search path - this is a bit of hack, but works
@@ -17,8 +17,6 @@ sys.path.insert(1, mu2edir) # insert after script path
 
 # now import of Mu2eNRET will work
 import Mu2eNRET
-
-quit()
 
 class Interface:
 	def __init__(self, WET3_dict, q, input_dict = None):
